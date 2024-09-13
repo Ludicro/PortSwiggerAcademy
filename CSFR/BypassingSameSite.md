@@ -1,4 +1,4 @@
-# Notes
+# Bypassing SameSite Notes
 ```
 In practicality, servers care less if they get GET or POST requests to an endpoint.
 
