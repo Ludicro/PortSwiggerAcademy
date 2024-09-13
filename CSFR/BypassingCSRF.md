@@ -1,9 +1,10 @@
-# Testing CSRF Tokens Checklist:
+# Bypassing CSRF Notes
+## Testing CSRF Tokens Checklist:
     - Relevant Actions (e.g. Change Email functionality)
     - Cookie based session handling
     - No unpredictlbe request parameter (e.g. CSRF Token)
 
-# Testing CSRF Tokens and CSRF Cookies Checklist:
+## Testing CSRF Tokens and CSRF Cookies Checklist:
     - Check if CSRF token is tied to CSRF cookie
         - Submit invalid CSRF token
         - Submit valid CSRF token taken from another user
@@ -22,7 +23,7 @@ In order to exploit this, the attacker must:
     2. Send a CSRF attack to victim with a known CSRF token 
 
 
-# CSRF Tokens are dependent on the request method
+## CSRF Tokens are dependent on the request method
     Some online applications will validate the token if the request method is POST, but ignore it if the request method is GET.
 
     The following request will work, even if the system used CSRF Tokens
@@ -31,7 +32,7 @@ In order to exploit this, the attacker must:
             Cookie: session=2yQIDcpia41WrATfjPqvm9tOkDvkMvLm
 
 
-# Some sites fail to verify if the CSRF token is simply not included in the POST request
+## Some sites fail to verify if the CSRF token is simply not included in the POST request
 
     This will not work because the CSRF token will fail to validate
         POST /email/change HTTP/1.1
@@ -51,11 +52,11 @@ In order to exploit this, the attacker must:
 
         email=pwned@evil-user.net
 
-# CSRF Tokens may not be tied to the user session
+## CSRF Tokens may not be tied to the user session
     This leaves CSRF tokens able to be generated, then stolen.
     This can be done by having an account and sending a request for the action, copying the token, dropping the request you sent, and then using that token on the attack.
 
-# CSRF is tied to a non-session Cookie
+## CSRF is tied to a non-session Cookie
     Some apps will tie the CSRF token to a cookie, but not to the cookie that tracks sessions
     One of the common reasons for this occuring is using 2 different frameworks that do not integrate
         One for session handling
@@ -67,7 +68,7 @@ In order to exploit this, the attacker must:
         The cookie-setting behavior does not even need to exist within the same web application as the CSRF vulnerability. Any other application within the same overall DNS domain can potentially be leveraged to set cookies in the application that is being targeted, if the cookie that is  controlled has suitable scope. 
         For example, a cookie-setting function on staging.demo.normal-website.com could be leveraged to place a cookie that is submitted to secure.normal-website.com.
 
-# CSRF Token is duplicate cookie
+## CSRF Token is duplicate cookie
     Sites may not use any server side records of the token and instead duplicate the token into the request and the cookie.
         This is called the "double submit" and is advocated because it is simple and easy to implement.
     There are cases where the attacker doesn't even need to steal the token and can generate their own
