@@ -7,6 +7,9 @@ The most common DOM-Based XSS is in the URL, typically accessed with the `window
 
 In certain circumstances, the payload can be placed in the path. 
 # How to Test for DOM-Based XSS
+Majority of DOM-Based XSS can be found with BurpSuite Pro's web scanner.
+
+Manually: look in a browser's developer tools and work through each source and test them individually.
 
 ## Test HTML Sinks
 
