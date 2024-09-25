@@ -42,7 +42,7 @@ There are a number of sinks that can lead to DOM-based vulnerabilities that can 
 
 For example, the `document.write` sink works with `script` elements so simple payloads like `document.write('... <script>alert(document.domain)</script> ...');` can work.
 
-[[Releveant Lab]](Lab2_DOMXSSin_document-write#Solution.md)
+[[Releveant Lab]](/XSS/Lab2_DOMXSSin_document-write_sink/Solution.md)
 
 ```
 Note: Some situations the content in the document.write has surrounding context that needs to be taken into account. For example, closing existing elements.
