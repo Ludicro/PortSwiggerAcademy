@@ -47,11 +47,13 @@ For example, the `document.write` sink works with `script` elements so simple pa
 ```
 Note: Some situations the content in the document.write has surrounding context that needs to be taken into account. For example, closing existing elements.
 ```
+[[Relevant Lab]](/XSS/Lab3_DOMXSSin_document-write_sink/Solution.md)
 
 The `innerHTML` sink doesn't accept `script` elements on modern browsers, nor does `svg onload` elements fire. This means alternate methods like `img` or `iframe` elements need to be used. `onload` or `onerror` can be used in conjection. For example:
 ```
 element.innerHTML='... <img src=1 onerror=alert(document.domain)> ...'
 ```
+[[Relevant Lab]](/XSS/Lab4_DOMXSSin_innerHTML_sink/Solution.md)
 
 ## Sources and Sinks in 3rd Party Dependencies
 
