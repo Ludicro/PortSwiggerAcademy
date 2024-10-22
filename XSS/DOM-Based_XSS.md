@@ -56,8 +56,43 @@ element.innerHTML='... <img src=1 onerror=alert(document.domain)> ...'
 [[Relevant Lab]](/XSS/Lab4_DOMXSSin_innerHTML_sink/Solution.md)
 
 ## Sources and Sinks in 3rd Party Dependencies
+Modern web applications are typically built using a number of third-party libraries and frameworks, which often provide additional functions and capabilities for developers. It's important to remember that some of these are also potential sources and sinks for DOM XSS. 
 
 ## DOM XSS in jQuery
+If Javascript libraries such as jQuery are used, look out for sinks that can alter DOM elements. For example, jQuery's `attr()` function can change attributes of DOM elements. If data is read from a user-controlled source like the URL and is then passed to `attr()`, it is possible to inject malicious Javascript.
+
+For example, here is JS that changes an anchor element's `href` attribute using URL data:
+```
+$(function() {
+	$('#backLink').attr("href",(new URLSearchParams(window.location.search)).get('returnUrl'));
+});
+```
+You can exploit this by modifying a URL so that the `location.source` contains a malicious JS URL. After the page's JavaScript applies this malicious URL to the back link's `href`, clicking the back link will execute the malicious JS.
+```
+?returnUrl=javascript:alert(document.domain)
+```
+
+[[Relevant Lab]](/XSS/Lab5_DOMXSS_jQueryAnchor/Solution.md)
+
+Another potential sink to look out for is jQuery's `$()` selector function, which can be used to inject malicious objects into the DOM. 
+
+jQuery used to be extremely popular, and a classic DOM XSS vulnerability was caused by websites using this selector in conjunction with the `location.hash` source for animations or auto-scrolling to a particular element on the page. This behavior was often implemented using a vulnerable `hashchange` event handler, similar to the following: 
+```
+$(window).on('hashchange', function() {
+	var element = $(location.hash);
+	element[0].scrollIntoView();
+});
+```
+ As the `hash` is user controllable, an attacker could use this to inject an XSS vector into the `$()` selector sink. More recent versions of jQuery have patched this particular vulnerability by preventing you from injecting HTML into a selector when the input begins with a hash character (`#`). However, you may still find vulnerable code in the wild.
+
+To actually exploit this classic vulnerability, you'll need to find a way to trigger a `hashchange` event without user interaction. One of the simplest ways of doing this is to deliver your exploit via an `iframe`:
+```
+<iframe src="https://vulnerable-website.com#" onload="this.src+='<img src=1 onerror=alert(1)>'">
+```
+In this example, the `src` attribute points to the vulnerable page with an empty hash value. When the `iframe` is loaded, an XSS vector is appended to the hash, causing the `hashchange` event to fire. 
+
+Note:
+Even newer versions of jQuery can still be vulnerable via the `$()` selector sink, provided you have full control over its input from a source that doesn't require a `#` prefix. 
 
 ## DOM XSS in AngularJS
 
