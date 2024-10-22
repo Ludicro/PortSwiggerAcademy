@@ -72,7 +72,7 @@ You can exploit this by modifying a URL so that the `location.source` contains a
 ?returnUrl=javascript:alert(document.domain)
 ```
 
-[[Relevant Lab]](/XSS/Lab5_DOMXSS_jQueryAnchor/Solution.md)
+[[Relevant Lab]](/XSS/Lab5_DOMXSS_jQueryAnchor_href/Solution.md)
 
 Another potential sink to look out for is jQuery's `$()` selector function, which can be used to inject malicious objects into the DOM. 
 
