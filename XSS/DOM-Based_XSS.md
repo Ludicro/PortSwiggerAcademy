@@ -95,9 +95,22 @@ Note:
 Even newer versions of jQuery can still be vulnerable via the `$()` selector sink, provided you have full control over its input from a source that doesn't require a `#` prefix. 
 
 ## DOM XSS in AngularJS
+If a framework like AngularJS is used, it is possible to execute JS without angle brackets or events. When a site uses the `ng-app` attribute on an HTML element, it will be processed by AngularJS. In this case, AngularJS will execute JavaScript inside double curly braces that can occur directly in HTML or inside attributes.
 
 # DOM XSS Combined with Reflected and Stored Data
+Some pure DOM-based vulnerabilities are self-contained within a single page. If scripts read data from a URL and writes it to a dangerous sink, then the vulnerability is entirely client-side.
+
+However, sources aren't limited to data that is directly exposed by browsers - they can also originate from the website. For example, websites often reflect URL parameters in the HTML response from the server. This is commonly associated with normal XSS, but it can also lead to reflected DOM XSS vulnerabilities.
+
+In a reflected DOM XSS vulnerability, the server processes data from the request, and echoes the data into the response. The reflected data might be placed into a JavaScript string literal, or a data item within the DOM, such as a form field. A script on the page then processes the reflected data in an unsafe way, ultimately writing it to a dangerous sink. 
+
+`eval('var data = "reflected string"');`
+
+Websites may also store data on the server and reflect it elsewhere. In a stored DOM XSS vulnerability, the server receives data from one request, stores it, and then includes the data in a later response. A script within the later response contains a sink which then processes the data in an unsafe way. 
+
+`element.innerHTML = comment.author`
 
 # Which Sinks Lead to DOM XSS Vulnerabilities?
+
 
 # How to Prevent DOM XSS
