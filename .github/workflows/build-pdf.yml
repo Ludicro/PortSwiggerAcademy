@@ -27,8 +27,7 @@ jobs:
           echo "% $(date +'%B %d, %Y')" >> cover.md
           echo "" >> cover.md  # Line break after title
           echo "\newpage" >> cover.md  # Force new page after title
-          echo "\tableofcontents" >> cover.md  # Table of contents
-          echo "\newpage" >> cover.md  # Force new page after ToC
+          echo "\tableofcontents" >> TOC.md  # Table of contents
 
           pandoc cover.md $(cat OrderList.txt) -o output.pdf \
             --pdf-engine=xelatex \
