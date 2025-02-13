@@ -23,11 +23,13 @@ jobs:
       - name: Generate Cover Page
         run: |
           cat << EOF > cover.md
+          ---
           title: "PortSwigger Academy Notes"
           author: "Luke Leveque"
           date: "$(date +'%B %d, %Y')"
           geometry: margin=1in
           fontsize: 12pt
+          ---
           EOF
 
       - name: Generate PDF
