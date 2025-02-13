@@ -13,15 +13,15 @@ XSS/DOMXSS/Lab3_DOMXSS_inside_select_element/Lab3_DOMXSS_Solution.md
 XSS/DOMXSS/Lab4_innerHTML_sink/Lab4_DOMXSS_Solution.md
 XSS/DOMXSS/Lab5_DOMXSS_jQueryAnchor_href/Lab5_DOMXSS_Solution.md
 CSRF/CSRF_Notes.md
-CSFR/BypassingCSRF.md
-CSFR/SameSite_Notes.md
-CSFR/BypassingSameSite.md
-CSFR/Labs/Lab1_DefenselessSite/CSFR_Lab1_exploit.md
-CSFR/Labs/Lab2_CSRFTokenRequiresPost/CSFR_Lab2_exploit.md
-CSFR/Labs/Lab3_CSRFTokenMissing/CSFR_Lab3_exploit.md
-CSFR/Labs/Lab4_CSRFNotSessionTied/CSRF_Lab4_exploit.md
-CSFR/Labs/Lab5_CSRFTiedToNon-SessionCookie/CSRF_Lab5_exploit.md
-CSFR/Labs/Lab6_CSRFTokenCookieDupe/CSRF_Lab6_exploit.md
-CSFR/Labs/Lab7_SameSiteBypassMethodOverwrite/CSRF_Lab7_exploit.md
-CSFR/Labs/Lab8_SameSiteStrictViaClientRedirect/CSRF_Lab8_exploit.md
+CSRF/BypassingCSRF.md
+CSRD/SameSite_Notes.md
+CSRD/BypassingSameSite.md
+CSRD/Labs/Lab1_DefenselessSite/CSRD_Lab1_exploit.md
+CSRD/Labs/Lab2_CSRFTokenRequiresPost/CSRD_Lab2_exploit.md
+CSRD/Labs/Lab3_CSRFTokenMissing/CSRD_Lab3_exploit.md
+CSRD/Labs/Lab4_CSRFNotSessionTied/CSRF_Lab4_exploit.md
+CSRD/Labs/Lab5_CSRFTiedToNon-SessionCookie/CSRF_Lab5_exploit.md
+CSRD/Labs/Lab6_CSRFTokenCookieDupe/CSRF_Lab6_exploit.md
+CSRD/Labs/Lab7_SameSiteBypassMethodOverwrite/CSRF_Lab7_exploit.md
+CSRD/Labs/Lab8_SameSiteStrictViaClientRedirect/CSRF_Lab8_exploit.md
 
