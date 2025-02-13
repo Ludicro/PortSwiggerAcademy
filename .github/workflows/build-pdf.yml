@@ -32,6 +32,7 @@ jobs:
             --metadata fontsize="12pt" \
             --variable titlepage=true \
             --variable toc-own-page=true \
+            --include-before-body pagebreak.tex \
             --toc \
             --toc-depth=2 \
             --metadata graphics=true
