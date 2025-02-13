@@ -29,7 +29,7 @@ jobs:
           echo "\newpage" >> cover.md  # Force new page after title
           echo "\tableofcontents" >> TOC.md  # Table of contents
 
-          pandoc cover.md $(cat OrderList.txt) -o output.pdf \
+          pandoc cover.md $(cat OrderList.txt) -o Ludicro-PortSwigger.pdf \
             --pdf-engine=xelatex \
             --resource-path=. \
             --toc --toc-depth=2 \
