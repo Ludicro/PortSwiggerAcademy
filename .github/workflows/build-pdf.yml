@@ -26,9 +26,11 @@ jobs:
           \begin{titlepage}
           \begin{center}
           \vspace*{2cm}
-          {\Huge \textbf{PortSwigger Academy Notes}} \\[1.5cm]
-          {\Large Ludicro} \\[1cm]
-          {\large $(date +'%B %d, %Y')} \\[2cm]
+          {\Huge \textbf{PortSwigger Academy Notes}} \\
+          \vspace{1.5cm}
+          {\Large Ludicro} \\
+          \vspace{1cm}
+          {\large $(date +'%B %d, %Y')} \\
           \vfill
           \end{center}
           \end{titlepage}
