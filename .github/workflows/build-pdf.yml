@@ -20,13 +20,17 @@ jobs:
       - name: Normalize File Paths (Windows to Linux)
         run: sed -i 's|\\|/|g' OrderList.txt
 
+      - name: Create Page Break File
+        run: |
+          echo "\newpage" > pagebreak.tex
+
       - name: Generate PDF
         run: |
           pandoc $(cat OrderList.txt) -o Ludicro-PortSwigger.pdf \
             --pdf-engine=xelatex \
             --resource-path=. \
             --metadata title="PortSwigger Academy Notes" \
-            --metadata author="Luke Leveque" \
+            --metadata author="Ludicro" \
             --metadata date="$(date +'%B %d, %Y')" \
             --metadata geometry="margin=1in" \
             --metadata fontsize="12pt" \
