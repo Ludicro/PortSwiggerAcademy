@@ -1,0 +1,35 @@
+name: Build PDF
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Install Pandoc and dependencies
+        run: sudo apt-get install -y pandoc texlive-xetex texlive-fonts-recommended texlive-plain-generic
+
+      - name: Generate PDF with Cover Page & Table of Contents
+        run: |
+          echo "% My Report Title" > cover.md
+          echo "% Author Name" >> cover.md
+          echo "% $(date +'%B %d, %Y')" >> cover.md
+
+          pandoc cover.md $(cat OrderList.txt) -o output.pdf \
+            --pdf-engine=xelatex \
+            --resource-path=. \
+            --toc --toc-depth=2
+
+      - name: Upload PDF artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: compiled-pdf
+          path: output.pdf
