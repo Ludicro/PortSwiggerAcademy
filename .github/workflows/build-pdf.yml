@@ -31,6 +31,7 @@ jobs:
             --metadata geometry="margin=1in" \
             --metadata fontsize="12pt" \
             --variable titlepage=true \
+            --variable toc-own-page=true \
             --toc \
             --toc-depth=2 \
             --metadata graphics=true
