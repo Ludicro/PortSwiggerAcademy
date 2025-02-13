@@ -19,8 +19,8 @@ jobs:
 
       - name: Generate PDF with Cover Page & Table of Contents
         run: |
-          echo "% My Report Title" > cover.md
-          echo "% Author Name" >> cover.md
+          echo "% PortSwigger Academy Notes" > cover.md
+          echo "% Luke Leveque" >> cover.md
           echo "% $(date +'%B %d, %Y')" >> cover.md
 
           pandoc cover.md $(cat OrderList.txt) -o output.pdf \
