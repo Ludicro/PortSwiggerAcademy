@@ -30,11 +30,11 @@ jobs:
           geometry: margin=1in
           fontsize: 12pt
           titlepage: true
-          toc: true
           ---
 
           /newpage{}
         
+          /toc
           EOF
 
       - name: Generate PDF
