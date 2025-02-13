@@ -31,10 +31,6 @@ jobs:
           fontsize: 12pt
           titlepage: true
           ---
-            /newpage
-          /newpage
-        
-          /tableofcontents
           EOF
 
       - name: Generate PDF
@@ -43,8 +39,8 @@ jobs:
             --pdf-engine=xelatex \
             --resource-path=. \
             --toc --toc-depth=2 \
-            --metadata graphics=true
-
+            --metadata graphics=true \
+            -V toc-own-page=true
       - name: Upload PDF artifact
         uses: actions/upload-artifact@v4
         with:
