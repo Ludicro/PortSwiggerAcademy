@@ -23,7 +23,5 @@ CSFR/Labs/Lab4_CSRFNotSessionTied/CSRF_Lab4_exploit.md
 CSFR/Labs/Lab5_CSRFTiedToNon-SessionCookie/CSRF_Lab5_exploit.md
 CSFR/Labs/Lab6_CSRFTokenCookieDupe/CSRF_Lab6_exploit.md
 CSFR/Labs/Lab7_SameSiteBypassMethodOverwrite/CSRF_Lab7_exploit.md
-CSFR/Labs/Lab7_SameSiteBypassMethodOverwrite/Lab7_Notes.md
 CSFR/Labs/Lab8_SameSiteStrictViaClientRedirect/CSRF_Lab8_exploit.md
-CSFR/Labs/Lab8_SameSiteStrictViaClientRedirect/Lab8_Notes.md
 

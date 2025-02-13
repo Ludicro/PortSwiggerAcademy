@@ -1,4 +1,6 @@
-# What is Stored XSS?
+# Stored XSS
+
+## What is Stored XSS?
 Occurs when an application recieves data from an untrusted source and includes that data within the HTTP response in an unsafe way.
 
 If a site allows for users to post comments on a blogpost which is displayed to other users, the HTTP request may look like the following:
@@ -23,7 +25,7 @@ This will result in the anyone visiting that blogpost getting the following resp
 <p><script>/* Bad stuff here... */</script></p>
 ```
 
-# Impact of Stored XSS
+## Impact of Stored XSS
 If an attacker can control a script that gets executed in a user's browser, they can usually fully compromise the user and carry out any actions that can be done by a reflected XSS attack. 
 
 The benefit of this attack over reflected XSS is that the attacker does not need to find an external way to get the victim to send the bad request.
