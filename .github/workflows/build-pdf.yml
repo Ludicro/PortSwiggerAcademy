@@ -20,27 +20,36 @@ jobs:
       - name: Normalize File Paths (Windows to Linux)
         run: sed -i 's|\\|/|g' OrderList.txt
 
-      - name: Create Page Break File
+      - name: Create Title Page File
         run: |
-          echo "\newpage" > pagebreak.tex
+          cat <<EOF > titlepage.tex
+          \begin{titlepage}
+          \begin{center}
+          \vspace*{2cm}
+          {\Huge \textbf{PortSwigger Academy Notes}} \\[1.5cm]
+          {\Large Ludicro} \\[1cm]
+          {\large $(date +'%B %d, %Y')} \\[2cm]
+          \vfill
+          \end{center}
+          \end{titlepage}
+          EOF
+
+      - name: Create Page Break File
+        run: echo "\newpage" > pagebreak.tex
 
       - name: Generate PDF
         run: |
           pandoc $(cat OrderList.txt) -o Ludicro-PortSwigger.pdf \
             --pdf-engine=xelatex \
             --resource-path=. \
-            --metadata title="PortSwigger Academy Notes" \
-            --metadata author="Ludicro" \
-            --metadata date="$(date +'%B %d, %Y')" \
-            --metadata geometry="margin=1in" \
-            --metadata fontsize="12pt" \
-            --variable titlepage=true \
-            --variable toc-own-page=true \
+            --include-before-body titlepage.tex \
             --include-before-body pagebreak.tex \
             --toc \
             --toc-depth=2 \
-            --metadata graphics=true
-            
+            --metadata graphics=true \
+            --metadata geometry="margin=1in" \
+            --metadata fontsize="12pt"
+
       - name: Upload PDF artifact
         uses: actions/upload-artifact@v4
         with:
