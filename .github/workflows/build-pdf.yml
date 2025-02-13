@@ -30,6 +30,8 @@ jobs:
           geometry: margin=1in
           fontsize: 12pt
           titlepage: true
+          toc: true
+          toc-own-page: true
           ---
           EOF
 
@@ -38,9 +40,9 @@ jobs:
           pandoc cover.md $(cat OrderList.txt) -o Ludicro-PortSwigger.pdf \
             --pdf-engine=xelatex \
             --resource-path=. \
-            --toc --toc-depth=2 \
-            --metadata graphics=true \
-            -V toc-own-page=true
+            --metadata graphics=true
+
+            
       - name: Upload PDF artifact
         uses: actions/upload-artifact@v4
         with:
