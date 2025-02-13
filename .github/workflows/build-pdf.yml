@@ -30,9 +30,12 @@ jobs:
           geometry: margin=1in
           fontsize: 12pt
           titlepage: true
-          toc: true
-          toc-own-page: true
           ---
+
+          \pagenumbering{roman}
+          \tableofcontents
+          \newpage
+          \pagenumbering{arabic}
           EOF
 
       - name: Generate PDF
@@ -41,7 +44,6 @@ jobs:
             --pdf-engine=xelatex \
             --resource-path=. \
             --metadata graphics=true
-
             
       - name: Upload PDF artifact
         uses: actions/upload-artifact@v4
