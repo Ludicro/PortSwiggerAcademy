@@ -22,12 +22,20 @@ jobs:
 
       - name: Generate PDF with Cover Page & Table of Contents
         run: |
-          echo "% PortSwigger Academy Notes" > cover.md
-          echo "% Luke Leveque" >> cover.md
-          echo "% $(date +'%B %d, %Y')" >> cover.md
-          echo "---" >> cover.md  # Line break after title
-          echo "\newpage" >> cover.md  # Force new page after title
-          echo "\tableofcontents" >> TOC.md  # Table of contents
+          cat <<EOF > cover.md
+          ---
+          title: "PortSwigger Academy Notes"
+          author: "Ludicro"
+          date: "$(date +'%B %d, %Y')"
+          geometry: margin=1in
+          fontsize: 12pt
+          titlepage: true
+          ---
+          
+          \newpage
+          \tableofcontents
+          \newpage
+          EOF
 
           pandoc cover.md $(cat OrderList.txt) -o Ludicro-PortSwigger.pdf \
             --pdf-engine=xelatex \
