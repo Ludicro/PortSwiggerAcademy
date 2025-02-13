@@ -25,7 +25,7 @@ jobs:
           echo "% PortSwigger Academy Notes" > cover.md
           echo "% Luke Leveque" >> cover.md
           echo "% $(date +'%B %d, %Y')" >> cover.md
-          echo "" >> cover.md  # Line break after title
+          echo "---" >> cover.md  # Line break after title
           echo "\newpage" >> cover.md  # Force new page after title
           echo "\tableofcontents" >> TOC.md  # Table of contents
 
@@ -39,4 +39,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: compiled-pdf
-          path: output.pdf
+          path: Ludicro-PortSwigger.pdf
