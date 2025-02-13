@@ -32,9 +32,9 @@ jobs:
           titlepage: true
           ---
 
-          /newpage{}
+          /newpage
         
-          /toc
+          /tableofcontents
           EOF
 
       - name: Generate PDF
