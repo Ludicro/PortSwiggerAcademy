@@ -35,9 +35,9 @@ jobs:
 
       - name: Generate Table of Contents Page
         run: |
-          echo "\newpage" > toc.md  # Forces a new page
+          echo "\pagebreak" > toc.md  # Forces a new page
           echo "\tableofcontents" >> toc.md  # Adds the Table of Contents
-          echo "\newpage" >> toc.md  # Forces a new page after ToC
+          echo "\pagebreak" >> toc.md  # Forces a new page after ToC
 
       - name: Generate PDF
         run: |
