@@ -30,14 +30,12 @@ jobs:
           geometry: margin=1in
           fontsize: 12pt
           titlepage: true
+          toc: true
           ---
+            
+          /newpage{}
+        
           EOF
-
-      - name: Generate Table of Contents Page
-        run: |
-          echo "\pagebreak" > toc.md  # Forces a new page
-          echo "\tableofcontents" >> toc.md  # Adds the Table of Contents
-          echo "\pagebreak" >> toc.md  # Forces a new page after ToC
 
       - name: Generate PDF
         run: |
