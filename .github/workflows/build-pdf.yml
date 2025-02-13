@@ -25,16 +25,25 @@ jobs:
           cat <<EOF > cover.md
           ---
           title: "PortSwigger Academy Notes"
-          author: "Ludicro"
+          author: "Luke Leveque"
           date: "$(date +'%B %d, %Y')"
           geometry: margin=1in
           fontsize: 12pt
           titlepage: true
           ---
           
-          \newpage
+          \clearpage
+          \begin{center}
+          {\huge \textbf{PortSwigger Academy Notes}} \\
+          \vspace{10pt}
+          {\large Ludicro} \\
+          \vspace{5pt}
+          {\large $(date +'%B %d, %Y')} \\
+          \end{center}
+
+          \clearpage
           \tableofcontents
-          \newpage
+          \clearpage
           EOF
 
           pandoc cover.md $(cat OrderList.txt) -o Ludicro-PortSwigger.pdf \
