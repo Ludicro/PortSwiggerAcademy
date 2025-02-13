@@ -20,33 +20,28 @@ jobs:
       - name: Normalize File Paths (Windows to Linux)
         run: sed -i 's|\\|/|g' OrderList.txt
 
-      - name: Generate PDF with Cover Page & Table of Contents
+      - name: Generate Cover Page
         run: |
           cat <<EOF > cover.md
           ---
           title: "PortSwigger Academy Notes"
-          author: "Luke Leveque"
+          author: "Ludicro"
           date: "$(date +'%B %d, %Y')"
           geometry: margin=1in
           fontsize: 12pt
           titlepage: true
           ---
-          
-          \clearpage
-          \begin{center}
-          {\huge \textbf{PortSwigger Academy Notes}} \\
-          \vspace{10pt}
-          {\large Ludicro} \\
-          \vspace{5pt}
-          {\large $(date +'%B %d, %Y')} \\
-          \end{center}
-
-          \clearpage
-          \tableofcontents
-          \clearpage
           EOF
 
-          pandoc cover.md $(cat OrderList.txt) -o Ludicro-PortSwigger.pdf \
+      - name: Generate Table of Contents Page
+        run: |
+          echo "\newpage" > toc.md
+          echo "\tableofcontents" >> toc.md
+          echo "\newpage" >> toc.md
+
+      - name: Generate PDF
+        run: |
+          pandoc cover.md toc.md $(cat OrderList.txt) -o Ludicro-PortSwigger.pdf \
             --pdf-engine=xelatex \
             --resource-path=. \
             --toc --toc-depth=2 \
