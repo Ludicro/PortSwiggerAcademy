@@ -25,7 +25,7 @@ jobs:
           cat <<EOF > cover.md
           ---
           title: "PortSwigger Academy Notes"
-          author: "Ludicro"
+          author: "Luke Leveque"
           date: "$(date +'%B %d, %Y')"
           geometry: margin=1in
           fontsize: 12pt
@@ -35,9 +35,9 @@ jobs:
 
       - name: Generate Table of Contents Page
         run: |
-          echo "\newpage" > toc.md
-          echo "\tableofcontents" >> toc.md
-          echo "\newpage" >> toc.md
+          echo "\newpage" > toc.md  # Forces a new page
+          echo "\tableofcontents" >> toc.md  # Adds the Table of Contents
+          echo "\newpage" >> toc.md  # Forces a new page after ToC
 
       - name: Generate PDF
         run: |
