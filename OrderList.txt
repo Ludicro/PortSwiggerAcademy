@@ -12,7 +12,7 @@ XSS/DOMXSS/Lab2_DOMXSSin_document-write_sink/Lab2_DOMXSS_Solution.md
 XSS/DOMXSS/Lab3_DOMXSS_inside_select_element/Lab3_DOMXSS_Solution.md
 XSS/DOMXSS/Lab4_innerHTML_sink/Lab4_DOMXSS_Solution.md
 XSS/DOMXSS/Lab5_DOMXSS_jQueryAnchor_href/Lab5_DOMXSS_Solution.md
-CSFR/CSRF_Notes.md
+CSRF/CSRF_Notes.md
 CSFR/BypassingCSRF.md
 CSFR/SameSite_Notes.md
 CSFR/BypassingSameSite.md
