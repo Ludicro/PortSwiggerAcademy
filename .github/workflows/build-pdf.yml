@@ -20,25 +20,20 @@ jobs:
       - name: Normalize File Paths (Windows to Linux)
         run: sed -i 's|\\|/|g' OrderList.txt
 
-      - name: Generate Cover Page
-        run: |
-          cat << EOF > cover.md
-          ---
-          title: "PortSwigger Academy Notes"
-          author: "Luke Leveque"
-          date: "$(date +'%B %d, %Y')"
-          geometry: margin=1in
-          fontsize: 12pt
-          ---
-          EOF
-
       - name: Generate PDF
         run: |
-          pandoc cover.md $(cat OrderList.txt) -o Ludicro-PortSwigger.pdf \
+          pandoc $(cat OrderList.txt) -o Ludicro-PortSwigger.pdf \
             --pdf-engine=xelatex \
             --resource-path=. \
-            --metadata graphics=true \
-            --toc 
+            --metadata title="PortSwigger Academy Notes" \
+            --metadata author="Luke Leveque" \
+            --metadata date="$(date +'%B %d, %Y')" \
+            --metadata geometry="margin=1in" \
+            --metadata fontsize="12pt" \
+            --variable titlepage=true \
+            --toc \
+            --toc-depth=2 \
+            --metadata graphics=true
             
       - name: Upload PDF artifact
         uses: actions/upload-artifact@v4
