@@ -28,7 +28,7 @@ jobs:
         run: |
           pandoc $(cat OrderList.txt) -o content.pdf \
             --verbose \
-            --s \
+            -s \
             --pdf-engine=xelatex \
             --resource-path=. \
             --metadata geometry="margin=1in" \
