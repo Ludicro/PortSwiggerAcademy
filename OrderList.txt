@@ -1,7 +1,13 @@
 introduction.md
+Server-side_Vulnerabilities\server_side_vuln_intro.md
 Server-side_Vulnerabilities/Path_Traversal.md
 Server-side_Vulnerabilities/Labs/FilePathTraversal-SimpleCase/Lab1_Walkthrough.md
 Server-side_Vulnerabilities/Access_Control.md
+Server-side_Vulnerabilities\Authentication.md
+Server-side_Vulnerabilities\SSRF.md
+Server-side_Vulnerabilities\File_Upload_Vulnerabilities.md
+Server-side_Vulnerabilities\OS_Command_Inject.md
+Server-side_Vulnerabilities\SQL_Injection.md
 XSS/XSS_Notes.md
 XSS/XSS_Contexts.md
 XSS/StoredXSS/Stored_XSS.md

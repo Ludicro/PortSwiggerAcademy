@@ -1,4 +1,5 @@
 # Access Control
+> Access controls are designed to prevent users from interacting with data or functionality for which they don't have the relevant permissions. Due to the obvious security impact, broken access controls are critical bugs in their own right. They often also provide access to more attack surface, which could contain additional vulnerabilities.
 
 ## What is access control?
 

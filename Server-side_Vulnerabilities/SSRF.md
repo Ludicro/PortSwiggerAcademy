@@ -1,0 +1,2 @@
+# Server-Side Request Forgery (SSRF)
+> SSRF vulnerabilities enable an attacker to trigger malicious server-to-server requests to unintended URLs. As the server issuing the request is likely to have a strong trust relationship with other systems on the network, the attacker can potentially abuse this behavior to access data, functionality, and services that are not meant to be exposed to external users.

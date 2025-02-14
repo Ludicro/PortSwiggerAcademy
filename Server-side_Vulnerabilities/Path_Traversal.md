@@ -1,4 +1,6 @@
 # Path Traversal
+> Path traversal (also known as directory traversal) vulnerabilities enable an attacker to interact with arbitrary files on the server, giving them access to sensitive data. If they can also write to these files, they can potentially modify application data or behavior, ultimately taking full control of the server.
+
 
 ## What is path traversal?
 Also known as directory travesal, this vulnerablity allows attackers to read files on a server that is running a web application.
