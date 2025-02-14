@@ -1,3 +1,5 @@
+\newpage
+
 # XSS
 
 ## What is Cross-Site Scripting (XSS)?

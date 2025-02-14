@@ -1,3 +1,5 @@
+\newpage
+
 # CSRF Notes
 ## When Attempting to Exploit CSRF Identify the Following:
     - Vulnerable Parameter
