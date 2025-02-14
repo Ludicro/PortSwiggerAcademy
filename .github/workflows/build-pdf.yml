@@ -27,6 +27,8 @@ jobs:
       - name: Generate Content PDF
         run: |
           pandoc $(cat OrderList.txt) -o content.pdf \
+            --verbose \
+            --s \
             --pdf-engine=xelatex \
             --resource-path=. \
             --metadata geometry="margin=1in" \
