@@ -36,9 +36,9 @@ jobs:
             --variable titlepage=true \
             --variable toc-own-page=true \
             --include-before-body pagebreak.tex \
-            --include-after-body pagebreak.tex \
             --toc \
             --toc-depth=2 \
+            --include-after-body pagebreak.tex \
             --metadata graphics=true
             
       - name: Upload PDF artifact
