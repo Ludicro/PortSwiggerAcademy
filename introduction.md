@@ -1,4 +1,4 @@
-/newpage
+\newpage
 
 # PortSwigger Academy Notes and Walkthroughs
 
