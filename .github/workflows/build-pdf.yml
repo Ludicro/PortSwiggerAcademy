@@ -31,7 +31,6 @@ jobs:
             --resource-path=. \
             --metadata title="PortSwigger Academy Notes" \
             --metadata author="Ludicro" \
-            --metadata date="$(date +'%B %d, %Y')" \
             --metadata geometry="margin=1in" \
             --metadata fontsize="12pt" \
             --variable titlepage=true \

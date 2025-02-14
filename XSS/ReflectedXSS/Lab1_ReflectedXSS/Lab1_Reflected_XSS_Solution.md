@@ -1,3 +1,5 @@
+# XSS Lab 1: Reflected XSS
+
 # Analysis
 Website has a search bar that when terms are entered into it, turns the URL from:
 ```

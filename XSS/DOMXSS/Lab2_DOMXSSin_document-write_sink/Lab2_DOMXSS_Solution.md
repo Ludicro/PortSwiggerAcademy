@@ -1,4 +1,4 @@
-# Lab 2: DOM XSS in document.write Sink
+# XSS Lab 2: DOM XSS in document.write Sink
 
 ## Analysis
 The string inputed in the search bar was found in the following snippet from Inspecting:
