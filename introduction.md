@@ -1,3 +1,4 @@
+/newpage
 # PortSwigger Academy Notes and Walkthroughs
 
 This is my collection of PortSwigger Academy notes and walkthroughs that I have completed during the course of my solving of the labs.
