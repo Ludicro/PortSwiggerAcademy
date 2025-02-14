@@ -6,6 +6,7 @@
 Also known as directory travesal, this vulnerablity allows attackers to read files on a server that is running a web application.
 
 Such files can include:
+
 - Application code/data
 - Credentials for back-end systems
 - Operating System files

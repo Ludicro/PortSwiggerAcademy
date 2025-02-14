@@ -87,6 +87,7 @@ Usually, the input field is populated in part of the HTTP request, allowing an a
 
 ## What is XSS Used For?
 Attackers who exploit XSS vulnerabilities can usually do the following:
+
 - Impersonate or masquerade as the victim user.
 - Carry out any action that the user is able to perform.
 - Read any data that the user is able to access.
@@ -121,6 +122,7 @@ It may be exploited to capture sensitive data that is visible to others, includi
 
 ## How to Prevent XSS
 Effectively preventing XSS usually involves combining the following techniques:
+
 - Filter input on arrival
   - At the point where user input is recieved, filter as strictly as possible based on what is expected or valid input.
 - Encode data on output
