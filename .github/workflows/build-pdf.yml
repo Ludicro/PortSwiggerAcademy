@@ -22,8 +22,7 @@ jobs:
 
       - name: Create Page Break File
         run: |
-          echo "\newpage" > pagebreak.tex
-          echo "\newpage" > pagebreak-after-toc.tex
+          echo "\\newpage\n\\tableofcontents\n\\newpage" > pagebreak.tex
 
       - name: Generate PDF
         run: |
@@ -37,11 +36,7 @@ jobs:
             --variable titlepage=true \
             --variable toc-own-page=true \
             --include-before-body pagebreak.tex \
-            --toc \
-            --toc-depth=2 \
-            --include-in-header pagebreak-after-toc.tex \
-            --metadata graphics=true
-            
+             --metadata graphics=true            
       - name: Upload PDF artifact
         uses: actions/upload-artifact@v4
         with:
