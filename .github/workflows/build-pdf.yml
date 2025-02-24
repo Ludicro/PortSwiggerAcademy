@@ -33,7 +33,7 @@ jobs:
             --verbose \
             -s \
             --pdf-engine=xelatex \
-            --resource-path=. \
+            --resource-path="$(find . -type d | tr '\n' ':')" \
             --metadata geometry="margin=1in" \
             --metadata fontsize="12pt" \
             --toc \
