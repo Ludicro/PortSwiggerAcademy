@@ -1,4 +1,4 @@
-# File path traversal, simple case
+# File path traversal - Lab 1: Simple Case
 
 ## Description
 This lab contains a path traversal vulnerability in the display of product images.
@@ -6,12 +6,14 @@ This lab contains a path traversal vulnerability in the display of product image
 To solve the lab, retrieve the contents of the `/etc/passwd` file.
 
 Starting web page:
-![](Server-side_Vulnerabilities\Labs\FilePathTraversal-SimpleCase\home_page.png)
+
+![](home_page.png)
 
 After clicking a product:
 - Page URL: `https:XXXXX.web-security-academy.net/product?productId=1`
 - Page:
-![](Server-side_Vulnerabilities\Labs\FilePathTraversal-SimpleCase\product_page.png)
+
+![](product_page.png)
 
 Looking in the source code for this page we can see the following HTML:
 ```
@@ -36,7 +38,7 @@ Here we can see two places that might be vulnerable to path traversal:
 - The `src` attribute of the `img` tag for the rating
 
 Opening the site in BurpSuite and intercepting the request to load we will see the following GET request:
-![](Server-side_Vulnerabilities\Labs\FilePathTraversal-SimpleCase\GET_unedited.png)
+![](GET_unedited.png)
 
 Now if we send this to the repeater and change the `filename` parameter to `../../../../etc/passwd` we will see the following response:
-![](Server-side_Vulnerabilities\Labs\FilePathTraversal-SimpleCase\passwd_contents.png)
+![](passwd_contents.png)
