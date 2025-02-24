@@ -49,3 +49,4 @@ jobs:
         with:
           name: compiled-pdf
           path: Ludicro-PortSwigger.pdf
+          compression-level: 0
