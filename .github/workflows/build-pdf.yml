@@ -14,9 +14,6 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Debug Image Paths
-        run: find . -name "*.png"
-
       - name: Normalize File Paths
         run: sed -i 's|\\|/|g' OrderList.txt
 
@@ -49,4 +46,3 @@ jobs:
         with:
           name: compiled-pdf
           path: Ludicro-PortSwigger.pdf
-          compression-level: 0
