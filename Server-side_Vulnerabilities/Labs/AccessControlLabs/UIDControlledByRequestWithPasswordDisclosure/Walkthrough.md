@@ -9,12 +9,12 @@ You can log in to your own account using the following credentials: `wiener:pete
 
 
 We are back on our shop page. If we log in with the credentials we were given, we can now see we have a place to reset our password:
-![alt text](account_page.png)
+![](account_page.png)
 
 Now, if we go to the URL and change the account id to `carlos`, we can see that we have access to his account and can see his masked password.
 
 If we then inspect the source code, we see that's it's still in plaintext:
-![alt text](carlos_pass.png)
+![](carlos_pass.png)
 
 Knowing we can do this, we can test this with common admin names like `admin` or `administrator` and see if we get a password.
 

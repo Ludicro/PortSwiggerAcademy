@@ -14,11 +14,14 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Install Pandoc and dependencies
-        run: sudo apt-get install -y pandoc texlive-xetex texlive-fonts-recommended texlive-plain-generic pdftk
+      - name: Debug Image Paths
+        uses: find . -name "*.png"
 
       - name: Normalize File Paths
         run: sed -i 's|\\|/|g' OrderList.txt
+
+      - name: Install Pandoc and dependencies
+        run: sudo apt-get install -y pandoc texlive-xetex texlive-fonts-recommended texlive-plain-generic pdftk
 
       - name: Create Page Break File
         run: |
