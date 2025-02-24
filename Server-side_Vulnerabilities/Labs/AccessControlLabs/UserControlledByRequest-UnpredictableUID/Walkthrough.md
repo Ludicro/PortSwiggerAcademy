@@ -19,6 +19,7 @@ If we go through the blogs, we can actually see that one of them was written by 
 This means we can see what his GUID is.
 
 If we take that and go back to our account page (on `/my-account?id=XXXX`) and plug in his GUID, we will access his account page and see his API Key:
+
 ![](carlos_page.png)
 
 From there we submit it as the lab requests and the lab is complete.

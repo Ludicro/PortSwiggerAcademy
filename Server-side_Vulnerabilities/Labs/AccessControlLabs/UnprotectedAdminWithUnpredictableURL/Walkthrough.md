@@ -13,6 +13,7 @@ Starting page:
 This has the same page as the previous lab, however this time there is no `robots.txt` file.
 
 However, when we look at the source code of the page, we can see some JavaScript that runs on load:
+
 ![](javascript.png)
 
 Inside we see that if the user is an admin, it will build based off the `/admin-nwenlv` page. 

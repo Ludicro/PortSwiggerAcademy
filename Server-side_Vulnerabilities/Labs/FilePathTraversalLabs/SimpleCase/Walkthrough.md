@@ -38,7 +38,9 @@ Here we can see two places that might be vulnerable to path traversal:
 - The `src` attribute of the `img` tag for the rating
 
 Opening the site in BurpSuite and intercepting the request to load we will see the following GET request:
+
 ![](GET_unedited.png)
 
 Now if we send this to the repeater and change the `filename` parameter to `../../../../etc/passwd` we will see the following response:
+
 ![](passwd_contents.png)
