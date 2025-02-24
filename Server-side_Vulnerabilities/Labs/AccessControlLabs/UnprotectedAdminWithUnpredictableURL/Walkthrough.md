@@ -1,6 +1,6 @@
-# Access Control - Lab 2: Unprotected Admin Functionality with Unpredictable URL
+## Access Control - Lab 2: Unprotected Admin Functionality with Unpredictable URL
 
-## Description
+### Description
 
 This lab has an unprotected admin panel. It's located at an unpredictable location, but the location is disclosed somewhere in the application.
 

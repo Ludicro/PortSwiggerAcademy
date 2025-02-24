@@ -1,6 +1,6 @@
-# Access Control - Lab 1: Unprotected Admin Functionality
+## Access Control - Lab 1: Unprotected Admin Functionality
 
-## Description
+### Description
 
 This lab has an unprotected admin panel.
 

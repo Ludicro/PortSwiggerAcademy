@@ -1,6 +1,6 @@
-# Access Control - Lab 4: User Controlled by Request Parameter with Unpredictable User ID
+## Access Control - Lab 4: User Controlled by Request Parameter with Unpredictable User ID
 
-## Description
+### Description
 This lab has a horizontal privilege escalation vulnerability on the user account page, but identifies users with GUIDs.
 
 To solve the lab, find the GUID for `carlos`, then submit his API key as the solution.

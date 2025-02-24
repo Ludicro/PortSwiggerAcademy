@@ -1,6 +1,6 @@
-# Access Control - Lab 5: User ID Controlled by Request Parameter with Password Disclosure
+## Access Control - Lab 5: User ID Controlled by Request Parameter with Password Disclosure
 
-## Description
+### Description
 This lab has user account page that contains the current user's existing password, prefilled in a masked input.
 
 To solve the lab, retrieve the administrator's password, then use it to delete the user `carlos`.

@@ -1,6 +1,6 @@
-# XSS Lab 4: innerHTML sink
+## XSS Lab 4: innerHTML sink
 
-## Analysis
+### Analysis
 Vulnerability location: blog search
 
 Script:

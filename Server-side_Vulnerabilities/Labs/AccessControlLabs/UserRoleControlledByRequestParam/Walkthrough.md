@@ -1,6 +1,6 @@
-# Access Control - Lab 3: User Role Controlled by Request Parameter
+## Access Control - Lab 3: User Role Controlled by Request Parameter
 
-## Description
+### Description
 
 This lab has an admin panel at `/admin`, which identifies administrators using a forgeable cookie.
 

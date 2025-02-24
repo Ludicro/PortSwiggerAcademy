@@ -1,6 +1,6 @@
-# File path traversal - Lab 1: Simple Case
+## File path traversal - Lab 1: Simple Case
 
-## Description
+### Description
 This lab contains a path traversal vulnerability in the display of product images.
 
 To solve the lab, retrieve the contents of the `/etc/passwd` file.

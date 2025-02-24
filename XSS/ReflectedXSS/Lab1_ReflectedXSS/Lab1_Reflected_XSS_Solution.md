@@ -1,6 +1,6 @@
-# XSS Lab 1: Reflected XSS
+## XSS Lab 1: Reflected XSS
 
-# Analysis
+### Analysis
 Website has a search bar that when terms are entered into it, turns the URL from:
 ```
 https://LAB-NUM.web-security-academy.net
