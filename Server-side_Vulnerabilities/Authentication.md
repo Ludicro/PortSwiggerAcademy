@@ -19,9 +19,29 @@ A brute-force attack is when an attacker uses a system of trial and error to gue
 Brute-forcing is not always a case of making completely random gusses at usernames and passwords. By applying basic logic and publically available knowledge, attackers can fine-tune their attacks to make more educated guesses. This increases the efficency of the attack tremendously. Wbesites that rely solely on password logins to authenticate their users are particularly vulnerable to brute-force attacks if proper protection isn't applied. 
 
 ## Brute-Forcing Usernames
+Usernames are generally easy to guess if they conform to a pattern, such as an email address. It is very common for business logins to be in the format of `firstname.lastname@company.com`. However, even if there is no obivious pattern, high priviledged accounts are often predictible such as `admin`, `root`, or `administrator`.
+
+During auditing, check if the website discloses potential usernames publically. For example, are user profiles accessible without logging in? Even if the content is hidden, the name in the profile may still be the same as the username. Checking HTTP responses for email addresses is another good thing to check. Occasionally, responses contain email addresses for high priviledged users such as admins or IT.
 
 ## Brute-Forcing Passwords
+Passwords can be similarly brute-forced, with the difficulty varying based on the strength of the password. Many websites adopt some form of password policy, which forces users to create high-entropy passwords that should be harder to crack using brute-force attacks.
+
+These typically involve: 
+- Minimum password length
+- Mixture of lowercase and uppercase letters
+- Mixture of numbers and symbols
+
+However, while high-entropy passwords are more difficult for computers to crack, knowledge of human behavior can be used to exploit vulnerabilities that users introduce into a system. Rather than creating a strong password with a random combination of characters, users often make passowrds they can remember and try to modify them to fit policy. If `mypassword` isn't allowed, something like `Mypassword!` or `Myp4$$w0rd` may be used.
+
+In cases where users are required to change their passwords regularly, it is also common for them to make minor changes. For example `Mypassword1!` may be changed to `Mypassword1?` or `Mypassword2!`.
+
+Knowing likely credentials and predictable password patterns means that brute-force attacks can be sophisitcated and therefore effective.
 
 ## Username Enumeration
+Username enumeration is when an attacker is able to observer changes in the website's behavior in order to validate if a given username is valid.
+
+Username enumeration is typically done on login pages, such as when you enter a valid username but a bad password, or on forms where you enter a username that is already taken. This reduces the time and effort required to brute-force a login because the attacker is able to generate lists of valid users.
+
+
 
 ## Bypassing Two-Factor Authentication
