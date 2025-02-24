@@ -56,4 +56,4 @@ CSRF/Labs/Lab8_SameSiteStrictViaClientRedirect/CSRF_Lab8_exploit.md
 
 
 
-appendix.md
+labmaterials.md

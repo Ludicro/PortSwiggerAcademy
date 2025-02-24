@@ -1,12 +1,10 @@
-# Appendix
+# Lab Materials
 
-## Lab Materials
+## Server-side Vulnerabilities
 
-### Server-side Vulnerabilities
+### Authentication
 
-#### Authentication
-
-##### Candidate Usernames
+#### Candidate Usernames
 ```
 carlos
 root
@@ -111,7 +109,7 @@ auto
 autodiscover
 ```
 
-##### Candidate Passwords
+#### Candidate Passwords
 ```
 123456
 password
