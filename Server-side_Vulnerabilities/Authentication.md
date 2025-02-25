@@ -42,6 +42,9 @@ Username enumeration is when an attacker is able to observer changes in the webs
 
 Username enumeration is typically done on login pages, such as when you enter a valid username but a bad password, or on forms where you enter a username that is already taken. This reduces the time and effort required to brute-force a login because the attacker is able to generate lists of valid users.
 
-
-
 ## Bypassing Two-Factor Authentication
+At times, two-factor authentication is flawed when implemented, so it can be entirely bypassed.
+
+If the user is first prompted for a password, then prompted for a code on a seperate page, the user is essentially in a "logged-in" state before they entered the verification code. In this case, it is worth testing if you can skip to the "logged-in only" pages after completeing the first authentication step. 
+
+On occasion, you may find a site that doesn't check if you completed the second step before loading the page.
