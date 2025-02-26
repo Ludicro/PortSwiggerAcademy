@@ -15,15 +15,23 @@ Server-side_Vulnerabilities\Labs\AccessControlLabs\UserControlledByRequest-Unpre
 Server-side_Vulnerabilities\Labs\AccessControlLabs\UIDControlledByRequestWithPasswordDisclosure\Walkthrough.md
 
 Server-side_Vulnerabilities\Authentication.md
+Server-side_Vulnerabilities\Labs\AuthenticationLabs\UsernameEnumerationViaDiffResponses\Walkthrough.md
+Server-side_Vulnerabilities\Labs\AuthenticationLabs\2FASimpleBypass\Walkthrough.md
 
 Server-side_Vulnerabilities\SSRF.md
+Server-side_Vulnerabilities\Labs\SSRFLabs\BasicSSRFAgainstLocalServer\Walkthrough.md
+Server-side_Vulnerabilities\Labs\SSRFLabs\BasicSSRFAgainstAnotherBackEndSystem\Walkthrough.md
 
 Server-side_Vulnerabilities\File_Upload_Vulnerabilities.md
+Server-side_Vulnerabilities\Labs\FileUploadVulnLabs\RemoteCodeExecViaWebShellUpload\Walkthrough.md
+Server-side_Vulnerabilities\Labs\FileUploadVulnLabs\WebShellUploadviaContentTypeRestrictionBypass\Walkthrough.md
 
 Server-side_Vulnerabilities\OS_Command_Inject.md
+Server-side_Vulnerabilities\Labs\OSCommandInjectionLabs\OSCommandInject-SimpleCase\Walkthrough.md
 
 Server-side_Vulnerabilities\SQL_Injection.md
-
+Server-side_Vulnerabilities\Labs\SQLInjectionLabs\SQLInjectVulnInWHEREClause\Walkthrough.md
+Server-side_Vulnerabilities\Labs\SQLInjectionLabs\SQLInjectVulnAllowingLoginBypass\Walkthrough.md
 
 
 XSS/XSS_Notes.md
