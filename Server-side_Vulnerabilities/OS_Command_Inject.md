@@ -36,7 +36,7 @@ The application implements no defenses so an attacker could inject the following
 & echo aiwefwlguh &
 ```
 
-If this is submitted as teh `productID` parameter, the following command is executed:
+If this is submitted as the `productID` parameter, the following command is executed:
 
 ```bash
 stockreport.pl & echo aiwefwlguh & 29
