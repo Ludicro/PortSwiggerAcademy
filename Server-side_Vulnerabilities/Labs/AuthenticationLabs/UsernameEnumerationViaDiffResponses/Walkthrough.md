@@ -5,6 +5,7 @@ This lab is vulnerable to username enumeration and password brute-force attacks.
 
 `Candidate usernames`
 `Candidate passwords`
+
 *I have included the wordlists in the lab materials section at the end of this paper.*
 
 To solve the lab, enumerate a valid username, brute-force this user's password, then access their account page.

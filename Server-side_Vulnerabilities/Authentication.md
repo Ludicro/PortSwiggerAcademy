@@ -27,6 +27,7 @@ During auditing, check if the website discloses potential usernames publically. 
 Passwords can be similarly brute-forced, with the difficulty varying based on the strength of the password. Many websites adopt some form of password policy, which forces users to create high-entropy passwords that should be harder to crack using brute-force attacks.
 
 These typically involve: 
+
 - Minimum password length
 - Mixture of lowercase and uppercase letters
 - Mixture of numbers and symbols

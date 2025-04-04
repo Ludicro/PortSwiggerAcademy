@@ -51,6 +51,7 @@ aiwefwlguh
 ```
 
 This shows that:
+
 - The original `stockreport.pl` was executed without its parameters.
 - The `echo` command was executed with the string `aiwefwlguh` as its parameter.
 - The `29` was not a command, so the error `command not found` was returned.

