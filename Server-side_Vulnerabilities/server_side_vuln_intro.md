@@ -13,4 +13,3 @@ This includes the following topics:
 - File Upload Vulnerabilities
 - OS Command Injection
 - SQL Injection
-
