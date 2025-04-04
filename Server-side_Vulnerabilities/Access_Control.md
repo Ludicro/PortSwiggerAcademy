@@ -84,7 +84,7 @@ These attacks may use similar exploit methods to vertical prrivilege escalation.
 https://insecure-website.com/myaccount?id=123
 ```
 
-But if they modify the `id` parameter tobe `124`, they might gain access to another user's account, data, and functions. 
+But if they modify the `id` parameter to be `124`, they might gain access to another user's account, data, and functions. 
 
 ```
 Note
