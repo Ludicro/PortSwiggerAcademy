@@ -24,6 +24,12 @@ jobs:
         run: |
           echo "\newpage" > pagebreak.tex
 
+      - name: Create Pandoc Header for Code Wrapping
+        run: |
+          echo '\usepackage{listings}' > header.tex
+          echo '\lstset{breaklines=true, breakatwhitespace=true, basicstyle=\ttfamily\small, columns=fullflexible}' >> header.tex
+          
+
       - name: Generate Content PDF
         run: |
           pandoc $(cat OrderList.txt) -o content.pdf \
@@ -35,7 +41,9 @@ jobs:
             --metadata fontsize="12pt" \
             --toc \
             --toc-depth=2 \
+            --include-in-header=header.tex \
             --include-after-body pagebreak.tex \
+            --listings \
             --metadata graphics=true
 
       - name: Combine PDFs
