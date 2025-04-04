@@ -3,8 +3,8 @@
 ### Description
 This lab is vulnerable to username enumeration and password brute-force attacks. It has an account with a predictable username and password, which can be found in the following wordlists:
 
-`Candidate usernames`
-`Candidate passwords`
+- `Candidate usernames`
+- `Candidate passwords`
 
 *I have included the wordlists in the lab materials section at the end of this paper.*
 
